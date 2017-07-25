@@ -128,3 +128,6 @@ $RECYCLE.BIN/
 ### Config ###
 # config file
 config.json
+
+# vscode
+.vscode/
