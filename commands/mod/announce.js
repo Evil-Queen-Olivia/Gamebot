@@ -31,13 +31,14 @@ module.exports = class SayCommand extends Command {
     
     hasPermission(msg) {
         if (msg.channel.type === "dm") return false;
-		if (this.client.isOwner(msg.author) || msg.member.hasPermission("METION_EVERYONE")) {
+		if (this.client.isOwner(msg.author) || msg.member.hasPermission("MENTION_EVERYONE")) {
             return true;
         } else return false;
 	}
 
     run(msg, args) {
     const { channel, ping, text } = args;
+    // Make embed
     const embed = new RichEmbed()
         .setDescription(text)
         .setAuthor(msg.author.username, msg.author.displayAvatarURL)
