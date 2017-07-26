@@ -13,7 +13,7 @@ var client = new CommandoClient({
     commandPrefix: '/',
     unknownCommandResponse: false,
     owner: [config.owner, config.owner2],
-    disableEveryone: true
+    disableEveryone: false
 });
 
 client.registry
